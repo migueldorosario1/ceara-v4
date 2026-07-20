@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "v1",
+  "source": "TSE votacao_candidato_munzona_2022_CE.csv",
+  "criterio": "Senadores eleitos em 2022; percentual sobre total de votos nominais para senador no CE.",
+  "total": 1,
+  "senadores": [
+    {
+      "nome": "Camilo",
+      "slug": "camilo",
+      "senador": "Camilo Sobreira de Santana",
+      "partido": "PT",
+      "numero": "131",
+      "votos": 3389513,
+      "totalVotosEstado": 4856028,
+      "percentualEstado": 69.8001,
+      "situacao": "ELEITO"
+    }
+  ]
+}

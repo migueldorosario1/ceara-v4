@@ -1,0 +1,593 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import HeaderCidade from '../../components/HeaderCidade.astro';
+import { cearaZones, ceRegions, topicTags } from '../../data/ceTaxonomy';
+import { sortPostsWithSticky } from '../../utils/stickyPosts';
+import vereadoresRj from '../../data/vereadores_ce.json';
+import parlamentaresRj from '../../data/parlamentares_ce.json';
+import deputadosEstaduaisEleitosRj from '../../data/deputados_estaduais_eleitos_ce_2022.json';
+import deputadosFederaisEleitosRj from '../../data/deputados_federais_eleitos_ce_2022.json';
+import senadoresEleitosRj from '../../data/senadores_eleitos_ce_2022.json';
+import prefeitosEleitosRj from '../../data/prefeitos_eleitos_ce_2024.json';
+import governoEstadoRjAtual from '../../data/governo_estado_ce_atual.json';
+
+type Vereador = { nome: string; slug: string; partido?: string; numero?: string; votosNominaisValidos?: number; percentualMunicipio?: number };
+type CidadeVer = { cidade: string; cidadeSlug: string; total: number; totalVotosNominaisMunicipio?: number; vereadores: Vereador[] };
+type Parlamentar = { nome: string; slug: string; partido?: string; urlOficial?: string };
+type Prefeito = {
+	municipio: string;
+	municipioSlug: string;
+	nome: string;
+	slug: string;
+	prefeito: string;
+	nomeUrna: string;
+	partido: string;
+	numero?: string;
+	votos: number;
+	totalVotosMunicipio: number;
+	percentualMunicipio: number;
+	situacao: string;
+	turno?: number | null;
+};
+type DeputadoEstadualEleito = {
+	nome: string;
+	slug: string;
+	deputado: string;
+	partido: string;
+	numero: string;
+	votos: number;
+	totalVotosEstado: number;
+	percentualEstado: number;
+	situacao: string;
+};
+type DeputadoFederalEleito = Omit<DeputadoEstadualEleito, 'deputado'> & { deputado_federal: string };
+type SenadorEleito = Omit<DeputadoEstadualEleito, 'deputado'> & { senador: string };
+
+const cidadesComVereadores = (vereadoresRj.cidades ?? []) as CidadeVer[];
+const cidadeVereadoresMap = new Map(cidadesComVereadores.map((c) => [c.cidadeSlug, c]));
+const prefeitosEleitos = (prefeitosEleitosRj.prefeitos ?? []) as Prefeito[];
+const prefeitosMap = new Map(prefeitosEleitos.map((prefeito) => [prefeito.municipioSlug, prefeito]));
+const deputadosEstaduaisEleitos = (deputadosEstaduaisEleitosRj.deputados ?? []) as DeputadoEstadualEleito[];
+const deputadosFederaisEleitos = (deputadosFederaisEleitosRj.deputados ?? []) as DeputadoFederalEleito[];
+const senadoresEleitos = (senadoresEleitosRj.senadores ?? []) as SenadorEleito[];
+const deputadosFederais = (parlamentaresRj.deputadosFederais ?? []) as Parlamentar[];
+const senadores = (parlamentaresRj.senadores ?? []) as Parlamentar[];
+const governadorAtual = governoEstadoRjAtual.governador as {
+	nome: string;
+	partido: string;
+	votos: number;
+	totalVotosEstado: number;
+	percentualEstado: number;
+	situacao: string;
+	observacao?: string;
+};
+const parlamentaresMap = new Map(
+	[
+		...deputadosEstaduaisEleitos.map((p) => [p.slug, { title: p.partido ? `Deputado estadual · ${p.partido}` : 'Deputado estadual', subtitle: p.nome, icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #d32f2f)' }]),
+		...deputadosFederaisEleitos.map((p) => [p.slug, { title: p.partido ? `Deputado federal · ${p.partido}` : 'Deputado federal', subtitle: p.nome, icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #2c3e50)' }]),
+		...senadoresEleitos.map((p) => [p.slug, { title: p.partido ? `Senador · ${p.partido}` : 'Senador', subtitle: p.nome, icon: '🏛️', color: 'linear-gradient(135deg, #2c3e50, #3498db)' }]),
+		...deputadosFederais.map((p) => [p.slug, { title: p.partido ? `Deputado federal · ${p.partido}` : 'Deputado federal', subtitle: p.nome, icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #2c3e50)' }]),
+		...senadores.map((p) => [p.slug, { title: p.partido ? `Senador · ${p.partido}` : 'Senador', subtitle: p.nome, icon: '🏛️', color: 'linear-gradient(135deg, #2c3e50, #3498db)' }]),
+	] as [string, { title: string; subtitle: string; icon: string; color: string }][]
+);
+
+export const prerender = false;
+
+const tag = Astro.params.tag;
+
+if (!tag) {
+	return Astro.redirect('/');
+}
+
+const allPosts = (await getCollection('blog')).filter((post) => !post.data.draft);
+const posts = allPosts.filter((post) => post.data.tags?.includes(tag));
+
+const sortedPosts = sortPostsWithSticky(posts);
+
+// Fancy mapping
+const taxonomyMeta = new Map([
+	...cearaZones.flatMap((group) => [
+		[group.slug, { title: 'Fortaleza', subtitle: group.label, icon: '📍', color: 'linear-gradient(135deg, #0052D4, #4364F7)' }],
+		...group.items.map((item) => [item.slug, { title: 'Fortaleza ' + group.label, subtitle: item.label, icon: '📍', color: 'linear-gradient(135deg, #0052D4, #4364F7)' }]),
+	]),
+	...ceRegions.flatMap((group) => [
+		[group.slug, { title: 'Estado do Ceará', subtitle: group.label, icon: '📍', color: 'linear-gradient(135deg, #2c3e50, #3498db)' }],
+		...group.items.map((item) => [item.slug, { title: group.label, subtitle: item.label, icon: '📍', color: 'linear-gradient(135deg, #2c3e50, #3498db)' }]),
+	]),
+	...topicTags.map((item) => [item.slug, { title: 'Cícero', subtitle: item.label, icon: '🗞️', color: 'linear-gradient(135deg, #141e30, #d32f2f)' }]),
+]);
+
+const regionMap = {
+	'fortaleza': { title: 'Região Metropolitana', subtitle: 'Fortaleza', icon: '🏙️', color: 'linear-gradient(135deg, #0052D4, #4364F7)' },
+	'caucaia': { title: 'Região Metropolitana', subtitle: 'Caucaia', icon: '🏙️', color: 'linear-gradient(135deg, #0052D4, #4364F7)' },
+	'maracanau': { title: 'Região Metropolitana', subtitle: 'Maracanaú', icon: '🏙️', color: 'linear-gradient(135deg, #0052D4, #4364F7)' },
+	'juazeiro-do-norte': { title: 'Região do Cariri', subtitle: 'Juazeiro do Norte', icon: '🏖️', color: 'linear-gradient(135deg, #1cb5e0, #000046)' },
+	'crato': { title: 'Região do Cariri', subtitle: 'Crato', icon: '🏖️', color: 'linear-gradient(135deg, #1cb5e0, #000046)' },
+	'barbalha': { title: 'Região do Cariri', subtitle: 'Barbalha', icon: '🏖️', color: 'linear-gradient(135deg, #1cb5e0, #000046)' },
+	'sobral': { title: 'Zona Norte', subtitle: 'Sobral', icon: '👑', color: 'linear-gradient(135deg, #11998e, #38ef7d)' },
+	'itapipoca': { title: 'Zona Norte', subtitle: 'Itapipoca', icon: '👑', color: 'linear-gradient(135deg, #11998e, #38ef7d)' },
+	'quixada': { title: 'Sertão Central', subtitle: 'Quixadá', icon: '⚙️', color: 'linear-gradient(135deg, #cb2d3e, #ef473a)' },
+	'quixeramobim': { title: 'Sertão Central', subtitle: 'Quixeramobim', icon: '⚙️', color: 'linear-gradient(135deg, #cb2d3e, #ef473a)' },
+	'aracati': { title: 'Litoral Leste', subtitle: 'Aracati', icon: '🏖️', color: 'linear-gradient(135deg, #00b4db, #0083b0)' },
+	'russas': { title: 'Vale do Jaguaribe', subtitle: 'Russas', icon: '🚜', color: 'linear-gradient(135deg, #56ab2f, #a8e063)' },
+	'limoeiro-do-norte': { title: 'Vale do Jaguaribe', subtitle: 'Limoeiro do Norte', icon: '🚜', color: 'linear-gradient(135deg, #56ab2f, #a8e063)' },
+	'nacional': { title: 'Brasil', subtitle: 'Nacional', icon: '🇧🇷', color: 'linear-gradient(135deg, #009c3b, #ffdf00)' },
+	'geopolitica': { title: 'Mundo', subtitle: 'Internacional', icon: '🌍', color: 'linear-gradient(135deg, #2c3e50, #3498db)' },
+	'eleicoes-2026': { title: 'Política', subtitle: 'Eleições 2026', icon: '🗳️', color: 'linear-gradient(135deg, #141e30, #d32f2f)' },
+	'deputados-estaduais': { title: 'Política CE', subtitle: 'Deputados Estaduais', icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #d32f2f)' },
+	'parlamentares-federais-ce': { title: 'Política CE', subtitle: 'Parlamentares Federais', icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #2c3e50)' },
+	'deputados-federais-ce': { title: 'Política CE', subtitle: 'Deputados Federais', icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #2c3e50)' },
+	'senadores-ce': { title: 'Política CE', subtitle: 'Senadores', icon: '🏛️', color: 'linear-gradient(135deg, #2c3e50, #3498db)' },
+	'governo-do-estado': { title: 'Política CE', subtitle: 'Governo do Estado', icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #2c3e50)' },
+};
+
+// Cidades por slug (pra resolver camara-{slug} / prefeitura-{slug})
+const citySlugToLabel = new Map(ceRegions.flatMap((region) => region.items.map((city) => [city.slug, city.label])));
+
+// Regiões por slug pra resolver turismo-{regiao}
+const regionSlugToLabel = new Map(ceRegions.map((region) => [region.slug, region.label]));
+
+// Colunistas slug → nome bonito
+const colunistasNomes: Record<string, string> = {
+	'colunista-heitor-vasques': 'Heitor Vasques',
+	'colunista-marilia-caleffi': 'Marília Caleffi',
+	'colunista-padre-nicodemo-esperanca': 'Padre Nicodemo Esperança',
+	'colunista-renato-bisneto': 'Renato Bisneto',
+	'colunista-joana-castro-ribeiro': 'Joana Castro Ribeiro',
+	'colunista-marco-aurelio-mansur': 'Marco Aurélio Mansur',
+	'colunista-gisele-tamayo': 'Gisele Tamayo',
+	'colunista-ronaldo-quirino': 'Ronaldo Quirino',
+	'colunista-sandra-lessa-bittencourt': 'Sandra Lessa Bittencourt',
+	'colunista-diogo-caminha': 'Diogo Caminha',
+	'colunista-beatriz-setubal-andrade': 'Beatriz Setúbal Andrade',
+	'colunista-edmilson-cabral': 'Edmilson Cabral',
+};
+
+const culturaLabels: Record<string, string> = {
+	'cultura-shows': 'Shows',
+	'cultura-teatro': 'Teatro',
+	'cultura-cinema': 'Cinema',
+	'cultura-exposicoes': 'Exposições',
+};
+
+function buildCouncilMeta(tag: string) {
+	if (tag.startsWith('camara-')) {
+		const citySlug = tag.replace(/^camara-/, '');
+		const cityLabel = citySlugToLabel.get(citySlug);
+		if (cityLabel) {
+			return { title: 'Câmara de Vereadores', subtitle: cityLabel, icon: '🏛️', color: 'linear-gradient(135deg, #141e30, #2c3e50)' };
+		}
+	}
+	if (tag.startsWith('prefeitura-')) {
+		const citySlug = tag.replace(/^prefeitura-/, '');
+		const cityLabel = citySlugToLabel.get(citySlug);
+		if (cityLabel) {
+			return { title: 'Prefeitura', subtitle: cityLabel, icon: '🏢', color: 'linear-gradient(135deg, #2c3e50, #3498db)' };
+		}
+	}
+	if (tag.startsWith('turismo-')) {
+		const subSlug = tag.replace(/^turismo-/, '');
+		const cityLabel = citySlugToLabel.get(subSlug) || regionSlugToLabel.get(subSlug);
+		if (cityLabel) {
+			return { title: 'Turismo', subtitle: cityLabel, icon: '🏝️', color: 'linear-gradient(135deg, #11998e, #38ef7d)' };
+		}
+	}
+	if (tag.startsWith('bares-')) {
+		const citySlug = tag.replace(/^bares-/, '');
+		const cityLabel = citySlugToLabel.get(citySlug);
+		if (cityLabel) {
+			return { title: 'Bares', subtitle: cityLabel, icon: '🍻', color: 'linear-gradient(135deg, #b06ab3, #4568dc)' };
+		}
+	}
+	if (culturaLabels[tag]) {
+		return { title: 'Cultura', subtitle: culturaLabels[tag], icon: '🎭', color: 'linear-gradient(135deg, #ff5f6d, #ffc371)' };
+	}
+	if (tag === 'opiniao-diaria') {
+		return { title: 'Opinião diária do portal', subtitle: 'Miguel do Rosário', icon: '✍️', color: 'linear-gradient(135deg, #232526, #414345)' };
+	}
+	if (colunistasNomes[tag]) {
+		return { title: 'Coluna', subtitle: colunistasNomes[tag], icon: '🖋️', color: 'linear-gradient(135deg, #4b6cb7, #182848)' };
+	}
+	return null;
+}
+
+const meta = taxonomyMeta.get(tag) || regionMap[tag] || buildCouncilMeta(tag) || parlamentaresMap.get(tag) || { title: 'Região do Estado', subtitle: tag.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '), icon: '📍', color: 'linear-gradient(135deg, #2c3e50, #3498db)' };
+
+// Listar vereadores quando a tag for camara-{cidadeSlug}
+let cidadeCouncil: CidadeVer | undefined;
+if (tag.startsWith('camara-')) {
+	cidadeCouncil = cidadeVereadoresMap.get(tag.replace(/^camara-/, ''));
+}
+let cidadePrefeitura: Prefeito | undefined;
+if (tag.startsWith('prefeitura-')) {
+	cidadePrefeitura = prefeitosMap.get(tag.replace(/^prefeitura-/, ''));
+}
+const governoDoEstado = tag === 'governo-do-estado' ? governadorAtual : undefined;
+const deputadosEstaduaisRoster = tag === 'deputados-estaduais' ? deputadosEstaduaisEleitos : [];
+const deputadosFederaisRoster = tag === 'deputados-federais-ce' ? deputadosFederaisEleitos : [];
+const senadoresRoster = tag === 'senadores-ce' ? senadoresEleitos : [];
+
+const isCidade = citySlugToLabel.has(tag) || cidadeVereadoresMap.has(tag.replace(/^camara-/, ''));
+---
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<BaseHead title={`${meta.subtitle} - Cícero`} description={`Notícias sobre ${meta.subtitle}`} />
+		<style define:vars={{ accentColor: meta.color }}>
+			main {
+				width: 960px;
+				margin: 0 auto;
+			}
+			.tag-hero {
+				background: #f7f9fc;
+				border: 1px solid #e6eaf0;
+				border-radius: 20px;
+				padding: 4rem 2rem;
+				color: #1a1a1a;
+				text-align: center;
+				margin-bottom: 3rem;
+				box-shadow: 0 8px 24px rgba(20, 30, 48, 0.06);
+				position: relative;
+				overflow: hidden;
+			}
+			.tag-hero::before {
+				/* faixa colorida fina no topo, preserva identidade visual da categoria */
+				content: '';
+				position: absolute;
+				top: 0; left: 0; right: 0;
+				height: 5px;
+				background: var(--accentColor);
+			}
+			.tag-hero::after {
+				content: '';
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+				background: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(0,0,0,0.04)"/></svg>') repeat;
+				pointer-events: none;
+			}
+			.tag-icon {
+				font-size: 5rem;
+				margin-bottom: 1rem;
+				filter: drop-shadow(0 6px 14px rgba(20, 30, 48, 0.15));
+			}
+			.tag-title {
+				font-size: 1.2rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: #555;
+				margin: 0 0 0.5rem 0;
+			}
+			.tag-subtitle {
+				font-size: 3.5rem;
+				font-weight: 800;
+				margin: 0;
+				line-height: 1.1;
+				color: #111;
+			}
+			
+			/* Grid Styles (Same as index.astro) */
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li {
+				width: calc(50% - 1rem);
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li img {
+				margin-bottom: 0.5rem;
+				border-radius: 12px;
+				width: 100%;
+			}
+			ul li a {
+				display: block;
+			}
+			.post-title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1.2;
+				font-size: 1.5rem;
+				font-weight: 700;
+			}
+			.date {
+				margin: 0.5rem 0 0 0;
+				color: rgb(var(--gray));
+				font-size: 0.9rem;
+			}
+			ul li a:hover .post-title,
+			ul li a:hover .date {
+				color: #0052D4;
+			}
+			ul a:hover img {
+				box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+				transform: translateY(-5px);
+			}
+			@media (max-width: 720px) {
+				ul li {
+					width: 100%;
+				}
+				.tag-hero {
+					padding: 3rem 1rem;
+					border-radius: 0;
+				}
+				.tag-subtitle {
+					font-size: 2.5rem;
+				}
+			}
+
+			/* Roster de vereadores (camara-{cidade}) */
+			.tag-counter {
+				margin: 1rem 0 0 0;
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #2c3e50;
+			}
+			.council-roster {
+				margin-bottom: 3rem;
+				background: #f7f9fc;
+				border-radius: 16px;
+				padding: 2rem;
+			}
+			.roster-title {
+				margin: 0 0 1.5rem 0;
+				font-size: 1.4rem;
+				font-weight: 700;
+				color: #141e30;
+				text-align: center;
+			}
+			.roster-list {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+				gap: 0.75rem;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.roster-list-single {
+				grid-template-columns: minmax(0, 680px);
+				justify-content: center;
+			}
+			.roster-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 0.75rem;
+				padding: 0.9rem 1.1rem;
+				background: white;
+				border-radius: 10px;
+				border: 1px solid #e6eaf0;
+				transition: border-color 0.2s, box-shadow 0.2s;
+			}
+			.roster-item:hover {
+				border-color: #0052D4;
+				box-shadow: 0 4px 12px rgba(0, 82, 212, 0.08);
+			}
+			.roster-name {
+				font-weight: 700;
+				color: #111;
+				font-size: 1.15rem;
+				line-height: 1.25;
+				flex: 1;
+			}
+.roster-party {
+	font-size: 0.85rem;
+	font-weight: 700;
+	background: #e6eaf0;
+	color: #2c3e50;
+	padding: 0.3rem 0.7rem;
+	border-radius: 6px;
+	white-space: nowrap;
+	letter-spacing: 0.5px;
+}
+			.roster-votes {
+				display: block;
+				font-size: 0.8rem;
+				font-weight: 500;
+				color: #666;
+				margin-top: 0.2rem;
+				line-height: 1.3;
+			}
+			.prefeitura-roster .roster-votes {
+				font-size: 1rem;
+				font-weight: 650;
+				color: #24364b;
+				line-height: 1.45;
+				margin-top: 0.35rem;
+			}
+			@media (max-width: 720px) {
+				.council-roster { padding: 1rem; }
+				.roster-list { grid-template-columns: 1fr; }
+				.roster-name { font-size: 1.05rem; }
+			}
+		</style>
+	</head>
+	<body>
+		{isCidade ? <HeaderCidade cityName={meta.subtitle} citySlug={tag} /> : <Header />}
+		<main>
+			<div class="tag-hero">
+				<div class="tag-icon">{meta.icon}</div>
+				<h3 class="tag-title">{meta.title}</h3>
+				<h1 class="tag-subtitle">{meta.subtitle}</h1>
+				{cidadeCouncil && (
+					<p class="tag-counter">{cidadeCouncil.total} vereadores eleitos em 2024</p>
+				)}
+				{cidadePrefeitura && (
+					<p class="tag-counter">Prefeito atual: {cidadePrefeitura.nome}</p>
+				)}
+				{governoDoEstado && (
+					<p class="tag-counter">Governador atual: {governoDoEstado.nome}</p>
+				)}
+				{deputadosEstaduaisRoster.length > 0 && (
+					<p class="tag-counter">{deputadosEstaduaisRoster.length} deputados estaduais eleitos em 2022</p>
+				)}
+				{deputadosFederaisRoster.length > 0 && (
+					<p class="tag-counter">{deputadosFederaisRoster.length} deputados federais eleitos em 2022</p>
+				)}
+				{senadoresRoster.length > 0 && (
+					<p class="tag-counter">{senadoresRoster.length} senador eleito em 2022</p>
+				)}
+			</div>
+
+			{cidadeCouncil && (
+				<section class="council-roster">
+					<h2 class="roster-title">Vereadores eleitos — {cidadeCouncil.cidade}</h2>
+					<ul class="roster-list">
+						{cidadeCouncil.vereadores.map((v) => (
+							<li class="roster-item">
+								<span class="roster-name">
+									{v.nome}
+									{v.votosNominaisValidos != null && (
+										<small class="roster-votes">{v.votosNominaisValidos.toLocaleString('pt-BR')} votos{v.percentualMunicipio != null ? ` · ${v.percentualMunicipio.toFixed(2)}%` : ''}</small>
+									)}
+								</span>
+								{v.partido && <span class="roster-party">{v.partido}</span>}
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{cidadePrefeitura && (
+				<section class="council-roster prefeitura-roster">
+					<h2 class="roster-title">Prefeitura — {cidadePrefeitura.municipio}</h2>
+					<ul class="roster-list roster-list-single">
+						<li class="roster-item">
+							<span class="roster-name">
+								{cidadePrefeitura.nome}
+								<small class="roster-votes">
+									{cidadePrefeitura.votos.toLocaleString('pt-BR')} votos
+									{cidadePrefeitura.totalVotosMunicipio > 0 ? ` · ${cidadePrefeitura.percentualMunicipio.toFixed(2)}% dos votos nominais válidos do município` : ' · sem votação direta validada'}
+									{cidadePrefeitura.numero ? ` · nº ${cidadePrefeitura.numero}` : ''}
+									{cidadePrefeitura.turno ? ` · ${cidadePrefeitura.turno}º turno` : ''}
+								</small>
+								{cidadePrefeitura.totalVotosMunicipio === 0 && (
+									<small class="roster-votes">{cidadePrefeitura.situacao}</small>
+								)}
+							</span>
+							<span class="roster-party">{cidadePrefeitura.partido}</span>
+						</li>
+					</ul>
+				</section>
+			)}
+
+			{governoDoEstado && (
+				<section class="council-roster">
+					<h2 class="roster-title">Governo do Estado — Ceará</h2>
+					<ul class="roster-list roster-list-single">
+						<li class="roster-item">
+							<span class="roster-name">
+								{governoDoEstado.nome}
+								<small class="roster-votes">
+									{governoDoEstado.votos.toLocaleString('pt-BR')} votos · sem votação direta para o mandato-tampão
+								</small>
+								{governoDoEstado.observacao && (
+									<small class="roster-votes">{governoDoEstado.observacao}</small>
+								)}
+							</span>
+							<span class="roster-party">{governoDoEstado.partido}</span>
+						</li>
+					</ul>
+				</section>
+			)}
+
+			{deputadosEstaduaisRoster.length > 0 && (
+				<section class="council-roster">
+					<h2 class="roster-title">Deputados estaduais eleitos — Ceará</h2>
+					<ul class="roster-list">
+						{deputadosEstaduaisRoster.map((deputado) => (
+							<li class="roster-item">
+								<span class="roster-name">
+									{deputado.nome}
+									<small class="roster-votes">
+										{deputado.votos.toLocaleString('pt-BR')} votos · {deputado.percentualEstado.toFixed(2)}% dos votos válidos estaduais · nº {deputado.numero}
+									</small>
+								</span>
+								<span class="roster-party">{deputado.partido}</span>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{deputadosFederaisRoster.length > 0 && (
+				<section class="council-roster">
+					<h2 class="roster-title">Deputados federais eleitos — Ceará</h2>
+					<ul class="roster-list">
+						{deputadosFederaisRoster.map((deputado) => (
+							<li class="roster-item">
+								<span class="roster-name">
+									{deputado.nome}
+									<small class="roster-votes">
+										{deputado.votos.toLocaleString('pt-BR')} votos · {deputado.percentualEstado.toFixed(2)}% dos votos nominais estaduais · nº {deputado.numero}
+									</small>
+								</span>
+								<span class="roster-party">{deputado.partido}</span>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			{senadoresRoster.length > 0 && (
+				<section class="council-roster">
+					<h2 class="roster-title">Senador eleito — Ceará</h2>
+					<ul class="roster-list">
+						{senadoresRoster.map((senador) => (
+							<li class="roster-item">
+								<span class="roster-name">
+									{senador.nome}
+									<small class="roster-votes">
+										{senador.votos.toLocaleString('pt-BR')} votos · {senador.percentualEstado.toFixed(2)}% dos votos nominais estaduais · nº {senador.numero}
+									</small>
+								</span>
+								<span class="roster-party">{senador.partido}</span>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			<section>
+				{sortedPosts.length ? (
+					<ul>
+						{
+							sortedPosts.map((post) => (
+								<li>
+									<a href={`/blog/${post.id}/`}>
+										{post.data.heroImage ? (
+										<img width="720" height="360" src={post.data.heroImage} onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt="" />
+									) : (
+										<img width="720" height="360" src="/images/fallback_ceara.png" alt="Ceará Digital" />
+									)}
+										<h4 class="post-title">{post.data.title}</h4>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				) : (
+					<p style="text-align: center; font-size: 1.1rem; color: rgb(var(--gray));">
+						A editoria está pronta. As próximas publicações aparecerão aqui automaticamente.
+					</p>
+				)}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

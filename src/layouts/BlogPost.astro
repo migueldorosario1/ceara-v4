@@ -1,0 +1,348 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import Interlinks from '../components/Interlinks.astro';
+import SocialShare from '../components/SocialShare.astro';
+import OpenComments from '../components/OpenComments.jsx';
+import NewsletterMailchimp from '../components/NewsletterMailchimp.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage, noindex = false, tags = [] } = Astro.props;
+
+const categoryLabels = new Map([
+	['politica-ce', 'Política CE'],
+	['seguranca-publica', 'Segurança Pública'],
+	['seguranca-publica-ce', 'Segurança Pública CE'],
+	['seguranca', 'Segurança'],
+	['rede-social', 'Rede Social'],
+	['redes-sociais', 'Rede Social'],
+	['nacional', 'Nacional'],
+	['internacional', 'Internacional'],
+	['geopolitica', 'Internacional'],
+	['transporte-mobilidade', 'Transporte e Mobilidade'],
+	['educacao', 'Educação'],
+	['saude', 'Saúde'],
+	['cultura-carnaval', 'Cultura e Carnaval'],
+	['economia-ce', 'Economia CE'],
+	['fortaleza-centro', 'Fortaleza Centro'],
+	['fortaleza-zona-leste', 'Fortaleza Zona Leste'],
+	['fortaleza-zona-sul', 'Fortaleza Zona Sul'],
+	['fortaleza-zona-oeste', 'Fortaleza Zona Oeste'],
+	['fortaleza-outros', 'Fortaleza - Outros Bairros'],
+	['regiao-metropolitana', 'Região Metropolitana'],
+	['regiao-cariri', 'Região do Cariri'],
+	['zona-norte-sobral', 'Zona Norte (Sobral)'],
+	['sertao-central-inhamuns', 'Sertão Central e Inhamuns'],
+	['litoral-leste-jaguaribe', 'Litoral Leste e Jaguaribe'],
+	['fortaleza', 'Fortaleza'],
+	['caucaia', 'Caucaia'],
+	['maracanau', 'Maracanaú'],
+	['maranguape', 'Maranguape'],
+	['aquiraz', 'Aquiraz'],
+	['eusebio', 'Eusébio'],
+	['pacatuba', 'Pacatuba'],
+	['horizonte', 'Horizonte'],
+	['pacajus', 'Pacajus'],
+	['cascavel', 'Cascavel'],
+	['itaitinga', 'Itaitinga'],
+	['sao-goncalo-do-amarante', 'São Gonçalo do Amarante'],
+	['juazeiro-do-norte', 'Juazeiro do Norte'],
+	['crato', 'Crato'],
+	['barbalha', 'Barbalha'],
+	['brejo-santo', 'Brejo Santo'],
+	['mauriti', 'Mauriti'],
+	['missao-velha', 'Missão Velha'],
+	['milagres', 'Milagres'],
+	['sobral', 'Sobral'],
+	['itapipoca', 'Itapipoca'],
+	['camocim', 'Camocim'],
+	['tiangua', 'Tianguá'],
+	['granja', 'Granja'],
+	['acarau', 'Acaraú'],
+	['vicosa-do-ceara', 'Viçosa do Ceará'],
+	['santa-quiteria', 'Santa Quitéria'],
+	['quixada', 'Quixadá'],
+	['quixeramobim', 'Quixeramobim'],
+	['crateus', 'Crateús'],
+	['taua', 'Tauá'],
+	['senador-pompeu', 'Senador Pompeu'],
+	['caninde', 'Canindé'],
+	['aracati', 'Aracati'],
+	['russas', 'Russas'],
+	['limoeiro-do-norte', 'Limoeiro do Norte'],
+	['morada-nova', 'Morada Nova'],
+	['jaguaribe', 'Jaguaribe'],
+	['quixere', 'Quixeré'],
+	['rio-de-janeiro', 'Ceará'],
+]);
+
+const categoryPriority = [
+	'politica-ce',
+	'seguranca-publica-ce',
+	'rede-social',
+	'redes-sociais',
+	'nacional',
+	'internacional',
+	'geopolitica',
+	'seguranca-publica',
+	'seguranca',
+	'transporte-mobilidade',
+	'educacao',
+	'saude',
+	'cultura-carnaval',
+	'economia-ce',
+	'fortaleza-centro',
+	'fortaleza-zona-leste',
+	'fortaleza-zona-sul',
+	'fortaleza-zona-oeste',
+	'fortaleza-outros',
+	'regiao-metropolitana',
+	'regiao-cariri',
+	'zona-norte-sobral',
+	'sertao-central-inhamuns',
+	'litoral-leste-jaguaribe',
+	'fortaleza',
+	'caucaia',
+	'maracanau',
+	'maranguape',
+	'aquiraz',
+	'eusebio',
+	'pacatuba',
+	'horizonte',
+	'pacajus',
+	'cascavel',
+	'itaitinga',
+	'sao-goncalo-do-amarante',
+	'juazeiro-do-norte',
+	'crato',
+	'barbalha',
+	'brejo-santo',
+	'mauriti',
+	'missao-velha',
+	'milagres',
+	'sobral',
+	'itapipoca',
+	'camocim',
+	'tiangua',
+	'granja',
+	'acarau',
+	'vicosa-do-ceara',
+	'santa-quiteria',
+	'quixada',
+	'quixeramobim',
+	'crateus',
+	'taua',
+	'senador-pompeu',
+	'caninde',
+	'aracati',
+	'russas',
+	'limoeiro-do-norte',
+	'morada-nova',
+	'jaguaribe',
+	'quixere',
+	'rio-de-janeiro',
+];
+
+function formatTagLabel(slug: string) {
+	return slug
+		.split('-')
+		.filter(Boolean)
+		.map((word) => (word.length <= 2 ? word.toUpperCase() : word.charAt(0).toUpperCase() + word.slice(1)))
+		.join(' ');
+}
+
+const normalizedTitle = title
+	.toLowerCase()
+	.normalize('NFD')
+	.replace(/[\u0300-\u036f]/g, '');
+const categorySlug =
+	categoryPriority.find((slug) => tags.includes(slug)) ||
+	(normalizedTitle.includes('rede social') ? 'rede-social' : undefined) ||
+	(normalizedTitle.includes('seguranca') ? 'seguranca-publica' : undefined) ||
+	tags.find((tag) => categoryLabels.has(tag)) ||
+	tags.find((tag) => tag !== 'rio-de-janeiro') ||
+	'rio-de-janeiro';
+const categoryLabel = categoryLabels.get(categorySlug) || formatTagLabel(categorySlug);
+const isOpinion = tags.some((tag) => tag === 'opiniao-diaria' || tag.startsWith('colunista-'));
+---
+
+<html lang="pt-BR">
+	<head>
+		<BaseHead title={title} description={description} image={heroImage} />
+		{noindex && <meta name="robots" content="noindex,nofollow" />}
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+			}
+			.hero-image {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				background: #f0f3f7;
+				border-radius: 12px;
+			}
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+				max-width: 100%;
+				max-height: 70vh;
+				width: auto;
+				height: auto;
+				object-fit: contain;
+			}
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+			}
+			@media (max-width: 768px) {
+				.title h1 {
+					font-size: 1.8rem;
+				}
+				.hero-image {
+					margin-bottom: 1rem;
+				}
+			}
+			.date {
+				margin-bottom: 0.5em;
+				color: rgb(var(--gray));
+			}
+			.category {
+				display: inline-flex;
+				align-items: center;
+				margin-bottom: 0.75rem;
+				padding: 0.35rem 0.7rem;
+				border: 1px solid rgb(var(--gray-light));
+				border-radius: 4px;
+				color: rgb(var(--accent));
+				font-size: 0.78rem;
+				font-weight: 700;
+				line-height: 1.2;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			.category:hover {
+				background: rgb(var(--gray-light));
+				color: rgb(var(--accent-dark));
+			}
+			.category-footer {
+				display: flex;
+				align-items: center;
+				gap: 0.6rem;
+				margin-top: 2rem;
+				padding-top: 1rem;
+				border-top: 1px solid rgb(var(--gray-light));
+				font-size: 0.9rem;
+				color: rgb(var(--gray-dark));
+			}
+			.category-footer-label {
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				font-size: 0.78rem;
+				color: rgb(var(--gray));
+			}
+			.category-footer-link {
+				margin-bottom: 0;
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+		</style>
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "NewsArticle",
+			"headline": title,
+			"image": heroImage ? [new URL(heroImage, Astro.url).href] : [],
+			"datePublished": pubDate.toISOString(),
+			"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+			"author": [{
+				"@type": "Organization",
+				"name": "Ceará Digital",
+				"url": "https://ceara.digital"
+			}],
+			"publisher": {
+				"@type": "Organization",
+				"name": "Ceará Digital",
+				"logo": {
+					"@type": "ImageObject",
+					"url": new URL('/favicon.png', Astro.url).href
+				}
+			}
+		})} />
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="hero-image">
+					{heroImage ? <img width="1020" height="510" src={heroImage} onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt="" /> : <img width="1020" height="510" src="/images/fallback_ceara.png" onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt="Ceará Digital" />}
+				</div>
+				<div class="social-top" style="text-align: center; margin-top: 1rem;">
+					<SocialShare title={title} url={Astro.url.href} />
+				</div>
+				<div class="prose">
+					<div class="title">
+						<a class="category" href={`/tags/${categorySlug}/`}>{categoryLabel}</a>
+						<div class="date">
+							<FormattedDate date={pubDate} />
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+						</div>
+						<h1>{title}</h1>
+						<hr />
+					</div>
+					<slot />
+					<div class="category-footer">
+						<span class="category-footer-label">Categoria:</span>
+						<a class="category category-footer-link" href={`/tags/${categorySlug}/`}>{categoryLabel}</a>
+					</div>
+					{isOpinion && <NewsletterMailchimp />}
+					
+					<div class="follow-us-footer" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(var(--gray-light), 0.5); display: flex; align-items: center; gap: 1rem;">
+						<span style="font-weight: bold; color: rgb(var(--gray)); font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px;">Siga nossas redes:</span>
+						<div style="display: flex; gap: 1rem; align-items: center;">
+							<a href="#" target="_blank" title="X" style="color: #555; transition: color 0.2s;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+							<a href="#" target="_blank" title="Instagram" style="color: #555; transition: color 0.2s;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+							<a href="#" target="_blank" title="Facebook" style="color: #555; transition: color 0.2s;"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+						</div>
+					</div>
+				</div>
+				<div class="prose" style="padding-top: 0;">
+					<Interlinks />
+				</div>
+				<div class="prose" style="padding-top: 0;">
+					<SocialShare title={title} url={Astro.url.href} />
+					<OpenComments client:load postUrl={Astro.url.pathname} />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

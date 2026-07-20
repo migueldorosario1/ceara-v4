@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "v1",
+  "source": "TSE votacao_candidato_munzona_2022_CE.csv",
+  "criterio": "Deputados federais eleitos em 2022; percentual sobre total de votos nominais para deputado federal no CE.",
+  "total": 22,
+  "deputadosFederais": [
+    {
+      "nome": "André Fernandes",
+      "slug": "andre-fernandes",
+      "deputado_federal": "André Fernandes de Moura",
+      "partido": "PL",
+      "numero": "2222",
+      "votos": 229509,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 4.6548,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Júnior Mano",
+      "slug": "junior-mano",
+      "deputado_federal": "Antonio Luiz Rodrigues Mano Junior",
+      "partido": "PL",
+      "numero": "2255",
+      "votos": 216531,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 4.3916,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Célio Studart",
+      "slug": "celio-studart",
+      "deputado_federal": "Célio Studart Barbosa",
+      "partido": "PSD",
+      "numero": "5511",
+      "votos": 205106,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 4.1599,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Eunício",
+      "slug": "eunicio",
+      "deputado_federal": "Eunício Lopes de Oliveira",
+      "partido": "MDB",
+      "numero": "1533",
+      "votos": 188289,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.8188,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Idilvan",
+      "slug": "idilvan",
+      "deputado_federal": "Antonio Idilvan de Lima Alencar",
+      "partido": "PDT",
+      "numero": "1213",
+      "votos": 187433,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.8014,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Guimarães do Pt",
+      "slug": "guimaraes-do-pt",
+      "deputado_federal": "Jose Nobre Guimaraes",
+      "partido": "PT",
+      "numero": "1322",
+      "votos": 186136,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.7751,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Luizianne Lins",
+      "slug": "luizianne-lins",
+      "deputado_federal": "Luizianne de Oliveira Lins",
+      "partido": "PT",
+      "numero": "1313",
+      "votos": 182232,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.6959,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Domingos Neto",
+      "slug": "domingos-neto",
+      "deputado_federal": "Domingos Gomes de Aguiar Neto",
+      "partido": "PSD",
+      "numero": "5555",
+      "votos": 175074,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.5508,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Aj Albuquerque",
+      "slug": "aj-albuquerque",
+      "deputado_federal": "Antonio José Aguiar Albuquerque",
+      "partido": "PP",
+      "numero": "1111",
+      "votos": 155456,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.1529,
+      "situacao": "ELEITO POR MÉDIA"
+    },
+    {
+      "nome": "Robério Monteiro",
+      "slug": "roberio-monteiro",
+      "deputado_federal": "Marcos Robério Ribeiro Monteiro",
+      "partido": "PDT",
+      "numero": "1233",
+      "votos": 151030,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.0631,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Matheus Noronha",
+      "slug": "matheus-noronha",
+      "deputado_federal": "Matheus Soares Noronha",
+      "partido": "PL",
+      "numero": "2299",
+      "votos": 150823,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 3.0589,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Mauro Filho",
+      "slug": "mauro-filho",
+      "deputado_federal": "Carlos Mauro Benevides Filho",
+      "partido": "PDT",
+      "numero": "1221",
+      "votos": 135038,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 2.7388,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Fernanda Pessoa",
+      "slug": "fernanda-pessoa",
+      "deputado_federal": "Fernanda Eneida Pessoa Caracas de Souza",
+      "partido": "UNIÃO",
+      "numero": "4477",
+      "votos": 121469,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 2.4636,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Moses Rodrigues",
+      "slug": "moses-rodrigues",
+      "deputado_federal": "Moses Haendel Melo Rodrigues",
+      "partido": "UNIÃO",
+      "numero": "4488",
+      "votos": 113294,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 2.2978,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "André Figueiredo",
+      "slug": "andre-figueiredo",
+      "deputado_federal": "André Peixoto Figueiredo Lima",
+      "partido": "PDT",
+      "numero": "1234",
+      "votos": 111886,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 2.2692,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Eduardo Bismarck",
+      "slug": "eduardo-bismarck",
+      "deputado_federal": "Eduardo Henrique Maia Bismarck",
+      "partido": "PDT",
+      "numero": "1214",
+      "votos": 102287,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 2.0745,
+      "situacao": "ELEITO POR MÉDIA"
+    },
+    {
+      "nome": "Luiz Gastão",
+      "slug": "luiz-gastao",
+      "deputado_federal": "Luiz Gastão Bittencourt da Silva",
+      "partido": "PSD",
+      "numero": "5533",
+      "votos": 96537,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 1.9579,
+      "situacao": "ELEITO POR MÉDIA"
+    },
+    {
+      "nome": "Yury do Paredão",
+      "slug": "yury-do-paredao",
+      "deputado_federal": "Yury Bruno Alencar Araújo",
+      "partido": "PL",
+      "numero": "2211",
+      "votos": 90425,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 1.834,
+      "situacao": "ELEITO POR QP"
+    },
+    {
+      "nome": "Danilo Forte",
+      "slug": "danilo-forte",
+      "deputado_federal": "Francisco Danilo Bastos Forte",
+      "partido": "UNIÃO",
+      "numero": "4447",
+      "votos": 88470,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 1.7943,
+      "situacao": "ELEITO POR MÉDIA"
+    },
+    {
+      "nome": "Jose Airton",
+      "slug": "jose-airton",
+      "deputado_federal": "Jose Airton Felix Cirilo da Silva",
+      "partido": "PT",
+      "numero": "1333",
+      "votos": 82274,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 1.6686,
+      "situacao": "ELEITO POR MÉDIA"
+    },
+    {
+      "nome": "Dr Jaziel",
+      "slug": "dr-jaziel",
+      "deputado_federal": "Jaziel Pereira de Sousa",
+      "partido": "PL",
+      "numero": "2277",
+      "votos": 79358,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 1.6095,
+      "situacao": "ELEITO POR MÉDIA"
+    },
+    {
+      "nome": "Priscila Costa",
+      "slug": "priscila-costa",
+      "deputado_federal": "Priscila Bezerra da Costa",
+      "partido": "PL",
+      "numero": "2288",
+      "votos": 74773,
+      "totalVotosEstado": 4930593,
+      "percentualEstado": 1.5165,
+      "situacao": "ELEITO POR MÉDIA"
+    }
+  ]
+}
