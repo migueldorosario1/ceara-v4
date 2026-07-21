@@ -9,9 +9,9 @@ source_url: "https://www.camara.leg.br/deputados/220657"
 tags: ["andré fernandes", "câmara dos deputados", "cota parlamentar", "pl", "ceará", "presença parlamentar"]
 lang: "pt-br"
 author: "Redação Ceará Digital"
-draft: true
+draft: false
 ---
-O deputado federal André Fernandes (PL-CE) acumulou, até julho de 2026, um total de R$ 196.726,65 em cota parlamentar, dos quais utilizou 52,2% (R$ 102.555,65), segundo dados oficiais da Câmara dos Deputados. O restante, R$ 180.171,00, não foi utilizado.
+O deputado federal André Fernandes (PL-CE) acumulou, até julho de 2026, um total de R$ 196.726,65 em cota parlamentar, dos quais utilizou 52,2%, segundo dados oficiais da Câmara dos Deputados. O restante, R$ 180.171,00 (47,8%), não foi utilizado.
 
 Os gastos mensais variaram: janeiro registrou R$ 30.038,32 (60,6% do disponível no mês); fevereiro, R$ 20.227,64 (29,4%); março, R$ 25.660,39 (24,6%); abril, R$ 57.111,97 (42,5%); maio, R$ 38.068,36 (28,8%); junho, R$ 24.559,78 (16,4%); e julho, apenas R$ 1.060,19 (0,6%).
 
