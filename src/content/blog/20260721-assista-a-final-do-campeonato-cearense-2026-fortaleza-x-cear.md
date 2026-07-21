@@ -2,6 +2,7 @@
 title: "Assista à final do Campeonato Cearense 2026: Fortaleza x Ceará completo"
 description: "Revivemos a grande final do estadual com o jogo completo. Veja os lances que decidiram o título cearense."
 pubDate: "2026-07-21"
+heroImage: "/hero/youtube-UwkL22fKsUM.jpg"
 hero_credit: "YouTube/canal"
 source_name: "YouTube — FORTALEZA X CEARÁ | FINAL | CAMPEONATO CEARENSE | JOGO COMPL"
 source_url: "https://www.youtube.com/watch?v=UwkL22fKsUM"

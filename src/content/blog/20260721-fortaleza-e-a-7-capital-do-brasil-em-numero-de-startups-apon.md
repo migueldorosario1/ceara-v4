@@ -2,6 +2,7 @@
 title: "Fortaleza é a 7ª capital do Brasil em número de startups, aponta Sebrae"
 description: "Capital cearense tem 406 startups, 64% do total do estado. Ceará é 8º no ranking nacional. Nordeste é a 2ª região com mais startups."
 pubDate: "2026-07-21"
+heroImage: "/hero/fortaleza-e-a-7-capital-do-brasil-em-numero-de-startups-apon.jpg"
 hero_credit: "Wikimedia Commons (CC BY-SA 3.0) — Niccolò Caranti"
 source_name: "Fortaleza está entre as 10 capitais do país em número de startups | ASN Ceará - Agência Sebrae de Notícias"
 source_url: "https://ce.agenciasebrae.com.br/inovacao-e-tecnologia/fortaleza-esta-entre-as-10-capitais-do-pais-em-numero-de-startups/"

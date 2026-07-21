@@ -2,6 +2,7 @@
 title: "Ceará tem 440 startups mapeadas e mais de R$ 2,3 bilhões em investimentos"
 description: "Levantamento do Sebrae CE revela ecossistema de inovação cearense com 440 startups, 35 mil empregos e R$ 2,3 bi captados."
 pubDate: "2026-07-21"
+heroImage: "/hero/ceara-tem-440-startups-mapeadas-e-mais-de-r-2-3-bilhoes-em-i.jpg"
 hero_credit: "Wikimedia Commons (CC BY-SA 3.0) — Niccolò Caranti"
 source_name: "Mapeamento Startups Cearenses 2022 - Sebrae CE"
 source_url: "https://lp.sebraeceara.com.br/mapeamento-startups-ceara-2022"

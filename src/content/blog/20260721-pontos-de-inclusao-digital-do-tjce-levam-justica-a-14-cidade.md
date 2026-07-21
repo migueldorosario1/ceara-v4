@@ -2,6 +2,7 @@
 title: "Pontos de Inclusão Digital do TJCE levam Justiça a 14 cidades do interior"
 description: "Com 14 PIDs, TJCE amplia acesso à Justiça no interior do Ceará, reduzindo deslocamentos e custos para a população."
 pubDate: "2026-07-21"
+heroImage: "/hero/pontos-de-inclusao-digital-do-tjce-levam-justica-a-14-cidade.jpg"
 hero_credit: "Wikimedia Commons (Public domain) — Edgar Degas"
 source_name: "Pontos de Inclusão Digital (PID) ampliam acesso à Justiça no Interior do Estado – Tribunal de Justiça do Estado do Ceará"
 source_url: "https://www.tjce.jus.br/noticias/pontos-de-inclusao-digital-pid-ampliam-acesso-a-justica-no-interior-do-estado-2/"
