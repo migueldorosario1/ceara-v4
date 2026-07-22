@@ -2,8 +2,8 @@
 title: "André Fernandes: R$ 196 mil em cota parlamentar, 100% de presença na Câmara"
 description: "Dados oficiais mostram que deputado do PL gastou 52,2% da cota parlamentar em 2026, com presença plena em plenário e comissões."
 pubDate: "2026-07-21"
-heroImage: "/hero/andre-fernandes-r-196-mil-em-cota-parlamentar-100-de-presenc.jpg"
-hero_credit: "Wikimedia Commons (Public domain) — Rafael José Olózaga"
+heroImage: "/hero/20260721-andre-fernandes-r-196-mil-em-cota-parlamentar-100-de-presenc.jpg"
+hero_credit: "Wikimedia Commons (CC BY 3.0) — Câmara dos Deputados"
 source_name: "Deputado Federal André Fernandes - Portal da Câmara dos Deputados"
 source_url: "https://www.camara.leg.br/deputados/220657"
 tags: ["andré fernandes", "câmara dos deputados", "cota parlamentar", "pl", "ceará", "presença parlamentar"]
