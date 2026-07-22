@@ -1,23 +1,18 @@
 [
   {
-    "title": "Governo Digital do Ceará lança ações 2026-2027 para modernizar serviços",
-    "description": "Plataforma integrada promete mais eficiência e inclusão digital para os cearenses com foco em transparência.",
-    "url": "/blog/20260721-governo-digital-do-ceara-lanca-acoes-2026-2027-para-moderniz/",
-    "hero": "/hero/governo-digital-do-ceara-lanca-acoes-2026-2027-para-moderniz.jpg",
-    "kicker": "Governo Digital"
-  },
-  {
-    "title": "ETICE: Governo do Ceará divulga organograma completo da estatal de TI",
-    "description": "Conheça a estrutura da Empresa de Tecnologia da Informação do Ceará (ETICE), com diretorias, gerências e conselhos.",
-    "url": "/blog/20260721-etice-governo-do-ceara-divulga-organograma-completo-da-estat/",
-    "hero": "/hero/etice-governo-do-ceara-divulga-organograma-completo-da-estat.jpg",
-    "kicker": "Etice"
-  },
-  {
+    "kicker": "Pesquisas",
+    "author": "Redação Ceará Digital",
     "title": "Pesquisa Ceará: Ciro Gomes lidera corrida ao governo, mas Lula domina disputa presidencial",
-    "description": "Pesquisa Paraná Pesquisas no Ceará aponta liderança de Ciro Gomes para o governo e domínio amplo do presidente Lula no cenário eleitoral de 2026.",
     "url": "/blog/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial/",
-    "hero": "/images/ig_card_ceara.jpg",
-    "kicker": "Lula"
+    "hero": "/hero/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial.jpg",
+    "description": "Ciro Gomes aparece à frente na corrida pelo Piratini cearense; no plano nacional, Lula lidera com folga no estado."
+  },
+  {
+    "kicker": "Pesquisas",
+    "author": "Redação Ceará Digital",
+    "title": "Ciro Gomes lança pré-candidatura ao governo do Ceará com críticas a Elmano",
+    "url": "/blog/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri/",
+    "hero": "/hero/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri.jpg",
+    "description": "Ex-ministro e presidenciável entra na disputa estadual mirando o PT e o governador Elmano de Freitas."
   }
 ]
