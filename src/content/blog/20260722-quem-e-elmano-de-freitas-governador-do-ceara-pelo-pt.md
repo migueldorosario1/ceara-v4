@@ -3,7 +3,7 @@ title: "Quem é Elmano de Freitas, governador do Ceará pelo PT"
 description: "Conheça a trajetória de Elmano de Freitas, do PT, eleito governador do Ceará em 2022, com atuação em direitos sociais e educação."
 pubDate: "2026-07-22"
 heroImage: "/hero/20260722-quem-e-elmano-de-freitas-governador-do-ceara-pelo-pt.jpg"
-hero_credit: "Wikimedia Commons (CC BY-SA 4.0) — Uira"
+hero_credit: "Photo by Murilo Fonseca on Pexels"
 source_name: "Elmano de Freitas – Partido dos Trabalhadores"
 source_url: "https://pt.org.br/elmano/"
 tags: ["elmano de freitas", "governador", "pt", "ceará", "trajetória política"]

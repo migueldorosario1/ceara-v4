@@ -3,7 +3,7 @@ title: "Presidenciáveis focam pré-campanha em São Paulo, aponta levantamento"
 description: "Lula, Flávio Bolsonaro, Caiado, Zema e Renan Santos priorizaram agendas no Sudeste, especialmente em SP, entre maio e julho."
 pubDate: "2026-07-28"
 heroImage: "/hero/presidenciaveis-focam-pre-campanha-em-sao-paulo-aponta-levan.jpg"
-hero_credit: "Photo by FotografieLink on Pixabay"
+hero_credit: "Photo by Lara Jameson on Pexels"
 source_name: "Presidenciáveis priorizam agendas de pré-campanha no Sudeste"
 source_url: "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/07/28/presidenciaveis-agendas-pre-campanha.ghtml"
 tags: ["presidenciáveis", "pré-campanha", "são paulo", "lula", "flávio bolsonaro", "eleições 2026"]

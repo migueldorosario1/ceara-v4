@@ -3,7 +3,7 @@ title: "Luizianne Lins mantém alta presença e destina emendas à saúde e cult
 description: "Deputada federal Luizianne Lins (REDE-CE) tem 61 presenças em plenário em 2026 e destinou emendas para saúde e cultura no Ceará."
 pubDate: "2026-07-21"
 heroImage: "/hero/luizianne-lins-mantem-alta-presenca-e-destina-emendas-a-saud.jpg"
-hero_credit: "Wikimedia Commons (Public domain) — Rafael José Olózaga"
+hero_credit: "Photo by Florian Lisi on Pexels"
 source_name: "Deputada Federal Luizianne Lins - Portal da Câmara dos Deputados"
 source_url: "https://www.camara.leg.br/deputados/178866"
 tags: ["luizianne lins", "câmara dos deputados", "ceará", "emendas parlamentares", "saúde", "cultura"]

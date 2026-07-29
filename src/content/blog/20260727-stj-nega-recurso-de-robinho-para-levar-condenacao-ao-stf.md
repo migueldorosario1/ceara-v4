@@ -3,7 +3,7 @@ title: "STJ nega recurso de Robinho para levar condenação ao STF"
 description: "Ministro Luis Felipe Salomão rejeita pedido da defesa do ex-jogador para que STF analise validação da pena de estupro."
 pubDate: "2026-07-27"
 heroImage: "/hero/stj-nega-recurso-de-robinho-para-levar-condenacao-ao-stf.jpg"
-hero_credit: "Photo by FotografieLink on Pixabay"
+hero_credit: "Senado Federal via Openverse (by)"
 source_name: "Ministro do STJ rejeita recurso que pretendia levar ao STF análise da condenação de Robinho por estupro"
 source_url: "https://g1.globo.com/politica/noticia/2026/07/27/ministro-do-stj-rejeita-recurso-que-pretendia-levar-ao-stf-analise-da-condenacao-de-robinho-por-estupro.ghtml"
 tags: ["robinho", "stj", "stf", "estupro", "condenação", "justiça"]

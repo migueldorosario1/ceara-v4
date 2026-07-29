@@ -3,7 +3,7 @@ title: "Brasil pode acionar OMC contra veto europeu à carne e vê motivação p
 description: "Governo avalia recorrer à OMC após UE barrar carne brasileira. Perdas podem chegar a US$ 2,4 bilhões por ano."
 pubDate: "2026-07-28"
 heroImage: "/hero/brasil-pode-acionar-omc-contra-veto-europeu-a-carne-e-ve-mot.jpg"
-hero_credit: "Photo by pedrokauanamorimlima on Pixabay"
+hero_credit: "Photo by Matheus Amaral on Pexels"
 source_name: "Brasil avalia acionar OMC contra veto da União Europeia à carne brasileira e vê motivação política"
 source_url: "https://g1.globo.com/politica/noticia/2026/07/28/brasil-avalia-acionar-omc-contra-veto-da-uniao-europeia-a-carne-brasileira-e-ve-motivacao-politica.ghtml"
 tags: ["omc", "uniao europeia", "carne", "exportacao", "itamaraty", "mercosul"]

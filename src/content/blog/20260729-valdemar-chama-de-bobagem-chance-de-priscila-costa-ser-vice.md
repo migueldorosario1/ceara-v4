@@ -3,7 +3,7 @@ title: "Valdemar chama de 'bobagem' chance de Priscila Costa ser vice de Flávio
 description: "Presidente do PL descarta vereadora cearense como vice de Flávio Bolsonaro; crise no Ceará envolve Michelle e Ciro Gomes."
 pubDate: "2026-07-29"
 heroImage: "/hero/valdemar-chama-de-bobagem-chance-de-priscila-costa-ser-vice.jpg"
-hero_credit: "Photo by FotografieLink on Pixabay"
+hero_credit: "Photo by Rodolfo Gaion on Pexels"
 source_name: "'Bobagem', diz presidente do PL sobre possibilidade de Priscila Costa ser vice de Flávio"
 source_url: "https://g1.globo.com/politica/blog/julia-duailibi/post/2026/07/28/bobagem-diz-presidente-do-pl-sobre-possibilidade-de-priscila-costa-ser-vice-de-flavio.ghtml"
 tags: ["priscila costa", "flávio bolsonaro", "valdemar costa neto", "pl", "eleições 2026", "ceará"]
