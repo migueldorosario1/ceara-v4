@@ -3,7 +3,7 @@ title: "Quaest: Lula lidera cenários e abre 5 pontos sobre Flávio Bolsonaro no
 description: "Pesquisa Genial/Quaest mostra Lula com 44% contra 39% de Flávio Bolsonaro em eventual segundo turno; no 1º turno, presidente tem 39%."
 pubDate: "2026-08-05"
 heroImage: "/hero/quaest-lula-lidera-cenarios-e-abre-5-pontos-sobre-flavio-bol.jpg"
-hero_credit: "Wikimedia Commons (CC BY-SA 3.0) — União da Juventude Mestiça"
+hero_credit: "Lula: J.M Executive/Flickr (domínio público) · Flávio Bolsonaro: Edilson Rodrigues/Agência Senado (CC BY 2.0)"
 source_name: "Quaest aponta Lula à frente de Flávio Bolsonaro por 44% a 39% em eventual segundo turno"
 source_url: "https://cearaagora.com.br/quaest-aponta-lula-a-frente-de-flavio-bolsonaro-por-44-a-39-em-eventual-segundo-turno/"
 tags: ["lula", "quaest", "pesquisa eleitoral", "flavio bolsonaro", "eleições 2026"]
