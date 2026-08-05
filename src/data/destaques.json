@@ -2,26 +2,18 @@
     {
         "kicker": "",
         "author": "Redação Ceará Digital",
-        "title": "Quem é Elmano de Freitas, governador do Ceará pelo PT",
-        "url": "/blog/20260722-quem-e-elmano-de-freitas-governador-do-ceara-pelo-pt/",
-        "hero": "/hero/20260722-quem-e-elmano-de-freitas-governador-do-ceara-pelo-pt.jpg",
-        "description": "Conheça a trajetória de Elmano de Freitas, do PT, eleito governador do Ceará em 2022, com atuação em direitos sociais e educação."
-    },
-    {
-        "kicker": "Política",
-        "author": "Miguel do Rosário",
-        "title": "Pesquisa Ceará: Ciro Gomes lidera corrida ao governo, mas Lula domina disputa presidencial",
-        "url": "/blog/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial/",
-        "hero": "/hero/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial.jpg",
-        "description": "Pesquisa Paraná Pesquisas no Ceará aponta liderança de Ciro Gomes para o governo e domínio amplo do presidente Lula no cenário eleitoral de 2026."
+        "title": "Ciro Gomes lança pré-candidatura ao governo do Ceará com críticas à gestão Elmano",
+        "url": "/blog/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri/",
+        "hero": "/hero/ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri.jpg",
+        "description": "Ex-ministro anuncia chapa com Roberto Cláudio e aliança com PL; discurso ataca segurança, saúde e STF."
     },
     {
         "kicker": "",
         "author": "Redação Ceará Digital",
-        "title": "André Fernandes: R$ 196 mil em cota parlamentar, 100% de presença na Câmara",
-        "url": "/blog/20260721-andre-fernandes-r-196-mil-em-cota-parlamentar-100-de-presenc/",
-        "hero": "/hero/20260721-andre-fernandes-r-196-mil-em-cota-parlamentar-100-de-presenc.jpg",
-        "description": "Dados oficiais mostram que deputado do PL gastou 52,2% da cota parlamentar em 2026, com presença plena em plenário e comissões."
+        "title": "Girão elogia Michelle por expor acordo 'indecoroso' do PL com Ciro",
+        "url": "/blog/20260805-girao-elogia-michelle-por-expor-acordo-indecoroso-do-pl-com/",
+        "hero": "/hero/girao-elogia-michelle-por-expor-acordo-indecoroso-do-pl-com.jpg",
+        "description": "Senador Eduardo Girão (Novo) elogia ex-primeira dama por criticar aliança do PL com Ciro Gomes no Ceará."
     },
     {
         "kicker": "",
@@ -38,5 +30,13 @@
         "url": "/blog/20260804-prazo-para-vices-termina-dia-5-flavio-e-zema-seguem-sem-defi/",
         "hero": "/hero/prazo-para-vices-termina-dia-5-flavio-e-zema-seguem-sem-defi.jpg",
         "description": "A três dias do fim do prazo, Flávio Bolsonaro e Zema ainda não definiram vices. Lula, Caiado e Renan Santos já têm chapas fechadas."
+    },
+    {
+        "kicker": "",
+        "author": "Redação Ceará Digital",
+        "title": "Lula oficializa candidatura à reeleição; lei impõe limites ao presidente-candidato",
+        "url": "/blog/20260804-lula-oficializa-candidatura-a-reeleicao-lei-impoe-limites-ao/",
+        "hero": "/hero/lula-oficializa-candidatura-a-reeleicao-lei-impoe-limites-ao.jpg",
+        "description": "Presidente Lula confirma chapa com Alckmin para 2026. Lei das Eleições define o que pode e o que é proibido durante a campanha."
     }
 ]
