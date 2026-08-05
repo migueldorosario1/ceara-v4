@@ -1,18 +1,18 @@
 [
-  {
-    "kicker": "Pesquisas",
-    "author": "Redação Ceará Digital",
-    "title": "Pesquisa Ceará: Ciro Gomes lidera corrida ao governo, mas Lula domina disputa presidencial",
-    "url": "/blog/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial/",
-    "hero": "/hero/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial.jpg",
-    "description": "Ciro Gomes aparece à frente na corrida pelo Piratini cearense; no plano nacional, Lula lidera com folga no estado."
-  },
-  {
-    "kicker": "Pesquisas",
-    "author": "Redação Ceará Digital",
-    "title": "Ciro Gomes lança pré-candidatura ao governo do Ceará com críticas a Elmano",
-    "url": "/blog/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri/",
-    "hero": "/hero/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri.jpg",
-    "description": "Ex-ministro e presidenciável entra na disputa estadual mirando o PT e o governador Elmano de Freitas."
-  }
+    {
+        "kicker": "Pesquisas",
+        "author": "Redação Ceará Digital",
+        "title": "Pesquisa Ceará: Ciro Gomes lidera corrida ao governo, mas Lula domina disputa presidencial",
+        "url": "/blog/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial/",
+        "hero": "/hero/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial.jpg",
+        "description": "Ciro Gomes aparece à frente na corrida pelo Piratini cearense; no plano nacional, Lula lidera com folga no estado."
+    },
+    {
+        "kicker": "Pesquisas",
+        "author": "Redação Ceará Digital",
+        "title": "Ciro Gomes lança pré-candidatura ao governo do Ceará com críticas a Elmano",
+        "url": "/blog/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri/",
+        "hero": "/hero/ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri.jpg",
+        "description": "Ex-ministro e presidenciável entra na disputa estadual mirando o PT e o governador Elmano de Freitas."
+    }
 ]
