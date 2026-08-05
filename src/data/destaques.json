@@ -1,6 +1,6 @@
 [
     {
-        "kicker": "",
+        "kicker": "Ciro gomes",
         "author": "Redação Ceará Digital",
         "title": "Ciro Gomes lança pré-candidatura ao governo do Ceará com críticas à gestão Elmano",
         "url": "/blog/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri/",
@@ -8,7 +8,23 @@
         "description": "Ex-ministro anuncia chapa com Roberto Cláudio e aliança com PL; discurso ataca segurança, saúde e STF."
     },
     {
-        "kicker": "",
+        "kicker": "Lula",
+        "author": "Redação Ceará Digital",
+        "title": "Quaest: Lula lidera cenários e abre 5 pontos sobre Flávio Bolsonaro no 2º turno",
+        "url": "/blog/20260805-quaest-lula-lidera-cenarios-e-abre-5-pontos-sobre-flavio-bol/",
+        "hero": "/hero/quaest-lula-lidera-cenarios-e-abre-5-pontos-sobre-flavio-bol.jpg",
+        "description": "Pesquisa Genial/Quaest mostra Lula com 44% contra 39% de Flávio Bolsonaro em eventual segundo turno; no 1º turno, presidente tem 39%."
+    },
+    {
+        "kicker": "Lei do minuto seguinte",
+        "author": "Redação Ceará Digital",
+        "title": "Lei do Minuto Seguinte: SUS deve atender vítimas de violência sexual",
+        "url": "/blog/20260805-lei-do-minuto-seguinte-sus-deve-atender-vitimas-de-violencia/",
+        "hero": "/hero/lei-do-minuto-seguinte-sus-deve-atender-vitimas-de-violencia.jpg",
+        "description": "Lei nº 12.845 completa 13 anos; SUS garante atendimento integral e gratuito a vítimas de violência sexual, sem exigir boletim de ocorrência."
+    },
+    {
+        "kicker": "Eduardo girao",
         "author": "Redação Ceará Digital",
         "title": "Girão elogia Michelle por expor acordo 'indecoroso' do PL com Ciro",
         "url": "/blog/20260805-girao-elogia-michelle-por-expor-acordo-indecoroso-do-pl-com/",
@@ -16,27 +32,11 @@
         "description": "Senador Eduardo Girão (Novo) elogia ex-primeira dama por criticar aliança do PL com Ciro Gomes no Ceará."
     },
     {
-        "kicker": "",
+        "kicker": "Ibge",
         "author": "Redação Ceará Digital",
         "title": "Produção industrial recua 1,8% em junho, aponta IBGE",
         "url": "/blog/20260804-producao-industrial-recua-1-8-em-junho-aponta-ibge/",
         "hero": "/hero/producao-industrial-recua-1-8-em-junho-aponta-ibge.jpg",
         "description": "Indústria brasileira cai 1,8% em junho, segunda queda seguida. No ano, alta de 1,5%; em 12 meses, 0,7%."
-    },
-    {
-        "kicker": "",
-        "author": "Redação Ceará Digital",
-        "title": "Prazo para vices termina dia 5; Flávio e Zema seguem sem definição",
-        "url": "/blog/20260804-prazo-para-vices-termina-dia-5-flavio-e-zema-seguem-sem-defi/",
-        "hero": "/hero/prazo-para-vices-termina-dia-5-flavio-e-zema-seguem-sem-defi.jpg",
-        "description": "A três dias do fim do prazo, Flávio Bolsonaro e Zema ainda não definiram vices. Lula, Caiado e Renan Santos já têm chapas fechadas."
-    },
-    {
-        "kicker": "",
-        "author": "Redação Ceará Digital",
-        "title": "Lula oficializa candidatura à reeleição; lei impõe limites ao presidente-candidato",
-        "url": "/blog/20260804-lula-oficializa-candidatura-a-reeleicao-lei-impoe-limites-ao/",
-        "hero": "/hero/lula-oficializa-candidatura-a-reeleicao-lei-impoe-limites-ao.jpg",
-        "description": "Presidente Lula confirma chapa com Alckmin para 2026. Lei das Eleições define o que pode e o que é proibido durante a campanha."
     }
 ]
