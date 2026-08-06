@@ -1,27 +1,21 @@
 [
     {
-        "kicker": "Ciro gomes",
-        "author": "Redação Ceará Digital",
-        "title": "Ciro Gomes lança pré-candidatura ao governo do Ceará com críticas à gestão Elmano",
-        "url": "/blog/20260721-ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri/",
-        "hero": "/hero/ciro-gomes-lanca-pre-candidatura-ao-governo-do-ceara-com-cri.jpg",
-        "description": "Ex-ministro anuncia chapa com Roberto Cláudio e aliança com PL; discurso ataca segurança, saúde e STF."
-    },
-    {
-        "kicker": "Lula",
-        "author": "Redação Ceará Digital",
-        "title": "Quaest: Lula lidera cenários e abre 5 pontos sobre Flávio Bolsonaro no 2º turno",
-        "url": "/blog/20260805-quaest-lula-lidera-cenarios-e-abre-5-pontos-sobre-flavio-bol/",
-        "hero": "/hero/quaest-lula-lidera-cenarios-e-abre-5-pontos-sobre-flavio-bol.jpg",
-        "description": "Pesquisa Genial/Quaest mostra Lula com 44% contra 39% de Flávio Bolsonaro em eventual segundo turno; no 1º turno, presidente tem 39%."
-    },
-    {
         "kicker": "Pesquisa quaest",
         "author": "Redação Ceará Digital",
         "title": "Quaest no Ceará: Ciro lidera com 43%, Elmano tem 33% no 1º turno",
         "url": "/blog/20260806-quaest-no-ceara-ciro-lidera-com-43-elmano-tem-33-no-1-turno/",
         "hero": "/hero/quaest-no-ceara-ciro-lidera-com-43-elmano-tem-33-no-1-turno.jpg",
-        "description": "Pesquisa Quaest/Genial mostra Ciro com 43% e Elmano com 33% no 1º turno no Ceará; 2º turno tem 48% a 35%."
+        "description": "Pesquisa Quaest/Genial mostra Ciro com 43% e Elmano com 33% no 1º turno no Ceará; 2º turno tem 48% a 35%.",
+        "pubDate": "2026-08-06"
+    },
+    {
+        "kicker": "Importunação sexual",
+        "author": "Redação Ceará Digital",
+        "title": "Homem é preso por importunação sexual durante aula de yoga no Cumbuco",
+        "url": "/blog/20260806-homem-e-preso-por-importunacao-sexual-durante-aula-de-yoga-n/",
+        "hero": "/hero/homem-e-preso-por-importunacao-sexual-durante-aula-de-yoga-n.jpg",
+        "description": "Suspeito de 25 anos foi flagrado se masturbando durante aula de yoga em hostel no Cumbuco, em Caucaia. Ele foi preso em flagrante.",
+        "pubDate": "2026-08-06"
     },
     {
         "kicker": "Eunicio oliveira",
@@ -29,7 +23,8 @@
         "title": "Eunício celebra unanimidade do MDB em apoio a Elmano e Lula",
         "url": "/blog/20260806-eunicio-celebra-unanimidade-do-mdb-em-apoio-a-elmano-e-lula/",
         "hero": "/hero/eunicio-celebra-unanimidade-do-mdb-em-apoio-a-elmano-e-lula.jpg",
-        "description": "Presidente estadual do MDB agradece convencionais e destaca unidade do partido na aliança com PT para 2026."
+        "description": "Presidente estadual do MDB agradece convencionais e destaca unidade do partido na aliança com PT para 2026.",
+        "pubDate": "2026-08-06"
     },
     {
         "kicker": "Elmano de freitas",
@@ -37,6 +32,16 @@
         "title": "Elmano de Freitas: trajetória do governador do Ceará em destaque",
         "url": "/blog/20260806-elmano-de-freitas-trajetoria-do-governador-do-ceara-em-desta/",
         "hero": "/hero/elmano-de-freitas-trajetoria-do-governador-do-ceara-em-desta.jpg",
-        "description": "Conheça a trajetória de Elmano de Freitas, governador do Ceará desde 2023, com origens em Baturité e carreira no PT."
+        "description": "Conheça a trajetória de Elmano de Freitas, governador do Ceará desde 2023, com origens em Baturité e carreira no PT.",
+        "pubDate": "2026-08-06"
+    },
+    {
+        "kicker": "Ideb",
+        "author": "Redação Ceará Digital",
+        "title": "Ceará lidera Nordeste no Ideb 2025 e avança em todos os níveis",
+        "url": "/blog/20260806-ceara-lidera-nordeste-no-ideb-2025-e-avanca-em-todos-os-nive/",
+        "hero": "/hero/ceara-lidera-nordeste-no-ideb-2025-e-avanca-em-todos-os-nive.jpg",
+        "description": "Estado cresce nos anos iniciais e finais do Fundamental e no Médio profissional, superando médias nacionais.",
+        "pubDate": "2026-08-06"
     }
 ]
