@@ -2,8 +2,8 @@
 title: "Chagas Vieira aposta em reeleição de Elmano no 1º turno em convenção do MDB"
 description: "Ex-secretário da Casa Civil reforça união da base e projeta vitória de Elmano de Freitas já no primeiro turno em 2026."
 pubDate: "2026-08-05"
-heroImage: "/hero/chagas-vieira-aposta-em-reeleicao-de-elmano-no-1-turno-em-co.jpg"
-hero_credit: "Photo by Nuno Magalhães on Pexels"
+heroImage: "/hero/ouro_d2a795bcefa0b249-chagas-vieira-aposta-em-reelei.jpg"
+hero_credit: "EBC/Agência Brasil — uso editorial com crédito"
 source_name: "Chagas Vieira reforça união da base e aposta em reeleição de Elmano no primeiro turno durante convenção do MDB"
 source_url: "https://cearaagora.com.br/chagas-vieira-reforca-uniao-da-base-e-aposta-em-reeleicao-de-elmano-no-primeiro-turno-durante-convencao-do-mdb/"
 tags: ["chagas-vieira", "elmano-de-freitas", "mdb", "eleicoes-2026", "base-aliada", "ceara"]

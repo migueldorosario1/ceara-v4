@@ -2,8 +2,8 @@
 title: "TRE-SP multa Lula em R$ 15 mil por propaganda antecipada"
 description: "Justiça Eleitoral de São Paulo condena presidente por pedido de apoio a Tebet e Marina; defesa pode recorrer."
 pubDate: "2026-07-30"
-heroImage: "/hero/tre-sp-multa-lula-em-r-15-mil-por-propaganda-antecipada.jpg"
-hero_credit: "Wikimedia Commons (Public domain) — IconografiaMusical"
+heroImage: "/hero/ouro_fdff2cf1e958a869-tre-sp-multa-lula-em-r-15-mil-.jpg"
+hero_credit: "EBC/Agência Brasil — uso editorial com crédito"
 source_name: "Justiça Eleitoral de SP multa Lula por propaganda antecipada; decisão é passível de recurso"
 source_url: "https://cearaagora.com.br/justica-eleitoral-de-sp-multa-lula-por-propaganda-antecipada-decisao-e-passivel-de-recurso/"
 tags: ["lula", "tre-sp", "propaganda antecipada", "multa", "simone tebet", "marina silva"]

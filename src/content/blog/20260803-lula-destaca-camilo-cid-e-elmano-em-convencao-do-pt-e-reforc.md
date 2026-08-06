@@ -2,8 +2,8 @@
 title: "Lula destaca Camilo, Cid e Elmano em convenção do PT e reforça prioridade do Ceará"
 description: "Presidente saúda lideranças cearenses na convenção nacional do PT e sinaliza peso estratégico do estado para 2026."
 pubDate: "2026-08-03"
-heroImage: "/hero/lula-destaca-camilo-cid-e-elmano-em-convencao-do-pt-e-reforc.jpg"
-hero_credit: "Photo by Tutz Dias on Unsplash"
+heroImage: "/hero/ouro_fb9ab076bc375e65-lula-destaca-camilo-cid-e-elma.jpg"
+hero_credit: "Lula Oficial (CC BY-SA 4.0)"
 source_name: "Lula destaca Camilo, Cid e Elmano em convenção nacional do PT e reforça prioridade do Ceará nas eleições de 2026"
 source_url: "https://cearaagora.com.br/lula-destaca-camilo-cid-e-elmano-em-convencao-nacional-do-pt-e-reforca-prioridade-do-ceara-nas-eleicoes-de-2026/"
 tags: ["lula", "camilo santana", "cid gomes", "elmano de freitas", "convenção do pt", "eleições 2026"]

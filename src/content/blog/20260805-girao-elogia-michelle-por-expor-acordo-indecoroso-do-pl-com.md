@@ -2,8 +2,8 @@
 title: "Girão elogia Michelle por expor acordo 'indecoroso' do PL com Ciro"
 description: "Senador Eduardo Girão (Novo) elogia ex-primeira dama por criticar aliança do PL com Ciro Gomes no Ceará."
 pubDate: "2026-08-05"
-heroImage: "/hero/girao-elogia-michelle-por-expor-acordo-indecoroso-do-pl-com.jpg"
-hero_credit: "Photo by Jonathan Borba on Pexels"
+heroImage: "/hero/ouro_1224bb0c59b21260-girao-elogia-michelle-por-expo.jpg"
+hero_credit: "Rodrigo Viana/Agência Senado (CC BY 2.0)"
 source_name: "Vice de Zema, Girão afirma que Michelle teve 'coragem' ao expor acordo 'indecoroso' do PL com Ciro"
 source_url: "https://g1.globo.com/ce/ceara/eleicoes/2026/noticia/2026/08/04/vice-de-zema-girao-afirma-que-michelle-teve-coragem-ao-expor-acordo-indecoroso-do-pl-com-ciro.ghtml"
 tags: ["eduardo girao", "michelle bolsonaro", "pl", "ciro gomes", "eleicoes 2026", "ceara"]

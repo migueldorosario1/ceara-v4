@@ -2,8 +2,8 @@
 title: "Lula oficializa candidatura à reeleição; lei impõe limites ao presidente-candidato"
 description: "Presidente Lula confirma chapa com Alckmin para 2026. Lei das Eleições define o que pode e o que é proibido durante a campanha."
 pubDate: "2026-08-04"
-heroImage: "/hero/lula-oficializa-candidatura-a-reeleicao-lei-impoe-limites-ao.jpg"
-hero_credit: "Photo by Joel Santos on Pexels"
+heroImage: "/hero/ouro_f0682f77c705a1a2-lula-oficializa-candidatura-a-.jpg"
+hero_credit: "Lula Oficial (CC BY-SA 4.0)"
 source_name: "Saiba o que Lula pode, ou não, fazer como presidente que concorre à reeleição"
 source_url: "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/08/03/saiba-o-que-lula-pode-ou-nao-fazer-como-presidente-que-concorre-a-reeleicao.ghtml"
 tags: ["lula", "eleições 2026", "lei das eleições", "reeleição", "alckmin"]

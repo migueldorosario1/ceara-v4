@@ -2,8 +2,8 @@
 title: "Quaest no Ceará: Ciro lidera com 43%, Elmano tem 33% no 1º turno"
 description: "Pesquisa Quaest/Genial mostra Ciro com 43% e Elmano com 33% no 1º turno no Ceará; 2º turno tem 48% a 35%."
 pubDate: "2026-08-06"
-heroImage: "/hero/quaest-no-ceara-ciro-lidera-com-43-elmano-tem-33-no-1-turno.jpg"
-hero_credit: "Photo by Alzenir on Pixabay"
+heroImage: "/hero/ouro_392f13ea98b5fbac-quaest-no-ceara-ciro-lidera-co.jpg"
+hero_credit: "Wikimedia Commons (CC BY 3.0) — Gilberto Soares"
 source_name: "Pesquisa Quaest Ceará: Ciro Gomes tem 43% e Elmano 33% no 1º turno | G1"
 source_url: "https://g1.globo.com/ce/ceara/eleicoes/2026/noticia/2026/07/30/quaest-ceara-governador-julho.ghtml"
 tags: ["pesquisa quaest", "eleições 2026", "ceará", "ciro gomes", "elmano de freitas"]

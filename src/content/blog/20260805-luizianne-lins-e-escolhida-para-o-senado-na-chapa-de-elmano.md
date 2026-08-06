@@ -2,8 +2,8 @@
 title: "Luizianne Lins é escolhida para o Senado na chapa de Elmano"
 description: "Deputada federal Luizianne Lins (PSOL-Rede) disputará o Senado na chapa de Elmano de Freitas, com PDT na suplência."
 pubDate: "2026-08-05"
-heroImage: "/hero/luizianne-lins-e-escolhida-para-o-senado-na-chapa-de-elmano.jpg"
-hero_credit: "Imagem conceitual gerada por IA (Ideogram)"
+heroImage: "/hero/ouro_3bb0fd0c1a5d8254-luizianne-lins-e-escolhida-par.jpg"
+hero_credit: "Wikimedia Commons (CC BY 2.0) — Senado Federal"
 source_name: "Luizianne Lins é escolhida para disputar o Senado na chapa de Elmano de Freitas"
 source_url: "https://cearaagora.com.br/luizianne-lins-e-escolhida-para-disputar-o-senado-na-chapa-de-elmano-de-freitas/"
 tags: ["luizianne lins", "senado", "elmano de freitas", "eleições 2026", "ceará", "política"]

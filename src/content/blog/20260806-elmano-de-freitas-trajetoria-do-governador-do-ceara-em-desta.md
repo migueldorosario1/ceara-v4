@@ -2,8 +2,8 @@
 title: "Elmano de Freitas: trajetória do governador do Ceará em destaque"
 description: "Conheça a trajetória de Elmano de Freitas, governador do Ceará desde 2023, com origens em Baturité e carreira no PT."
 pubDate: "2026-08-06"
-heroImage: "/hero/elmano-de-freitas-trajetoria-do-governador-do-ceara-em-desta.jpg"
-hero_credit: "Photo by Daniel Duarte on Pexels"
+heroImage: "/hero/ouro_80e5586ad68bc559-elmano-de-freitas-trajetoria-d.jpg"
+hero_credit: "EBC/Agência Brasil — uso editorial com crédito"
 source_name: "Elmano de Freitas - Wikipédia, a enciclopédia livre"
 source_url: "https://pt.wikipedia.org/wiki/Elmano_de_Freitas"
 tags: ["elmano de freitas", "governo do ceará", "pt", "política cearense", "baturité"]
