@@ -1,7 +1,7 @@
 {
-  "enabled": false,
+  "_doc": "Painel de Destaques (CCTV V6). enabled: liga/desliga a seção; regra: audiencia|recentes; max_age_hours: idade máx do destaque (0=sem limite); top: nº de cards.",
+  "enabled": true,
   "regra": "audiencia",
   "max_age_hours": 48.0,
-  "top": 5,
-  "_doc": "Editado pelo painel_destaques.py — enabled: liga/desliga a seção Destaques; regra: audiencia|recentes; max_age_hours: idade máxima do destaque (0=sem limite); top: nº de cards."
+  "top": 5
 }
