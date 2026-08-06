@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "regra": "audiencia",
   "max_age_hours": 48.0,
   "top": 5,
