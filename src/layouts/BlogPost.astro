@@ -12,7 +12,7 @@ import NewsletterMailchimp from '../components/NewsletterMailchimp.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, noindex = false, tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, noindex = false, tags = [], hero_legenda, hero_credit } = Astro.props;
 
 const categoryLabels = new Map([
 	['politica-ce', 'Política CE'],
@@ -184,6 +184,8 @@ const isOpinion = tags.some((tag) => tag === 'opiniao-diaria' || tag.startsWith(
 			.hero-image {
 				width: 100%;
 				display: flex;
+				flex-direction: column;
+				align-items: center;
 				justify-content: center;
 				background: #f0f3f7;
 				border-radius: 12px;
@@ -198,6 +200,19 @@ const isOpinion = tags.some((tag) => tag === 'opiniao-diaria' || tag.startsWith(
 				width: auto;
 				height: auto;
 				object-fit: contain;
+			}
+			.image-caption {
+				margin: 0.5rem auto 0;
+				padding: 0 1rem 0.75rem;
+				max-width: 720px;
+				color: rgb(var(--gray));
+				font-size: 0.85rem;
+				line-height: 1.4;
+				text-align: center;
+			}
+			.image-caption .image-caption-text {
+				font-weight: 600;
+				color: rgb(var(--gray-dark));
 			}
 			.prose {
 				width: 720px;
@@ -297,7 +312,13 @@ const isOpinion = tags.some((tag) => tag === 'opiniao-diaria' || tag.startsWith(
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage ? <img width="1020" height="510" src={heroImage} onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt="" /> : <img width="1020" height="510" src="/images/fallback_ceara.png" onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt="Ceará Digital" />}
+					{heroImage ? <img width="1020" height="510" src={heroImage} onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt={hero_legenda || title} /> : <img width="1020" height="510" src="/images/fallback_ceara.png" onerror="this.onerror=null;this.src='/images/fallback_ceara.png';" alt="Ceará Digital" />}
+					{heroImage && (hero_legenda || hero_credit) && (
+						<p class="image-caption">
+							{hero_legenda && <span class="image-caption-text">{hero_legenda}</span>}
+							{hero_credit && <span class="image-credit">{hero_legenda ? ' — ' : ''}Foto: {hero_credit}</span>}
+						</p>
+					)}
 				</div>
 				<div class="social-top" style="text-align: center; margin-top: 1rem;">
 					<SocialShare title={title} url={Astro.url.href} />
