@@ -10,7 +10,16 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
     site: 'https://ceara.digital',
     adapter: vercel(),
-    integrations: [mdx(), sitemap(), react()],
+    integrations: [
+        mdx(),
+        sitemap({
+            filter: (page) => {
+                const path = new URL(page).pathname;
+                return !/(^|\/)(tags|teste|preview)(\/|-|$)/.test(path);
+            },
+        }),
+        react(),
+    ],
     fonts: [
         {
             provider: fontProviders.local(),
