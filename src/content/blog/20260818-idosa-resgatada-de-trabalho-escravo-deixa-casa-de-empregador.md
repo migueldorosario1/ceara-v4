@@ -10,7 +10,7 @@ source_url: "https://cearaagora.com.br/idosa-resgatada-em-situacao-analoga-a-esc
 tags: ["trabalho escravo", "idoso", "eusebio", "mpt", "direitos humanos"]
 lang: "pt-br"
 author: "Redação Ceará Digital"
-draft: false
+draft: true
 ---
 A idosa de 62 anos resgatada em condições análogas à escravidão não está mais na casa dos empregadores, em Eusébio, na Grande Fortaleza. A informação foi confirmada pelo Ministério Público do Trabalho (MPT), que também informou que a vítima não trabalha mais no local e teve sua rescisão concluída.
 
