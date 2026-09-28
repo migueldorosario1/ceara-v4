@@ -8,6 +8,7 @@ tags: ["ceara"]
 lang: "pt-br"
 author: "Redação Ceará Digital"
 draft: false
+heroImage: "/hero/como-ceará-e-fortaleza-tentam-combater-a-síndrome-do-torcedor-misto-no.jpg"
 ---
 
 Ceará e Fortaleza têm adotado estratégias para combater o que chamam de síndrome do torcedor misto no Interior do estado. O fenômeno ocorre quando torcedores dividem sua preferência entre os dois clubes.

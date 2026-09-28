@@ -8,6 +8,7 @@ tags: ["ceara"]
 lang: "pt-br"
 author: "Redação Ceará Digital"
 draft: false
+heroImage: "/hero/ceará-tem-cinco-desfalques-e-um-retorno-diante-do-operário-pr.jpg"
 ---
 
 O Ceará terá cinco desfalques e um retorno para a partida contra o Operário-PR. A informação foi divulgada pelo ge na escalação do time.
