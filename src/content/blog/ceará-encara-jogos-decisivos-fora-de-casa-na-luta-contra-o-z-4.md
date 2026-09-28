@@ -9,6 +9,7 @@ lang: "pt-br"
 author: "Redação Ceará Digital"
 draft: false
 heroImage: "/hero/ceará-encara-jogos-decisivos-fora-de-casa-na-luta-contra-o-z-4.jpg"
+hero_credit: "United Kingdom Hydrographic Office / Wikimedia Commons (Public domain)"
 ---
 
 O Ceará se prepara para uma série de compromissos como visitante na luta para se afastar da zona de rebaixamento do Campeonato Brasileiro. A equipe terá jogos decisivos fora de casa, segundo informação publicada pelo ge.globo.com.

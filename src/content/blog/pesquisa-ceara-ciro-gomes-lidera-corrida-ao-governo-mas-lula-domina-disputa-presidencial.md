@@ -3,6 +3,7 @@ title: "Pesquisa Ceará: Ciro Gomes lidera corrida ao governo, mas Lula domina d
 description: "Pesquisa Paraná Pesquisas no Ceará aponta liderança de Ciro Gomes para o governo e domínio amplo do presidente Lula no cenário eleitoral de 2026."
 pubDate: "2026-03-01T10:00:00Z"
 heroImage: "/hero/pesquisa-ceara-ciro-gomes-lidera-corrida-ao-governo-mas-lula-domina-disputa-presidencial.jpg"
+hero_credit: "United Kingdom Hydrographic Office / Wikimedia Commons (Public domain)"
 draft: false
 tags: ["lula", "ceara", "eleicoes-2026", "flavio-bolsonaro", "ciro-gomes", "elmano-de-freitas", "pesquisa-eleitoral", "parana-pesquisas"]
 categoria_macro: "politica"

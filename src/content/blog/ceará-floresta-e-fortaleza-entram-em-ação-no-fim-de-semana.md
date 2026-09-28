@@ -9,6 +9,7 @@ lang: "pt-br"
 author: "Redação Ceará Digital"
 draft: false
 heroImage: "/hero/ceará-floresta-e-fortaleza-entram-em-ação-no-fim-de-semana.jpg"
+hero_credit: "United Kingdom Hydrographic Office / Wikimedia Commons (Public domain)"
 ---
 
 O fim de semana terá jogos de Ceará, Floresta e Fortaleza, de acordo com informação publicada pelo jornal O POVO. Os três clubes cearenses aparecem na agenda esportiva do período.

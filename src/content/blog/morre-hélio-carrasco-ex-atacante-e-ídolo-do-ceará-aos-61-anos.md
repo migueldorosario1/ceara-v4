@@ -9,6 +9,7 @@ lang: "pt-br"
 author: "Redação Ceará Digital"
 draft: false
 heroImage: "/hero/morre-hélio-carrasco-ex-atacante-e-ídolo-do-ceará-aos-61-anos.jpg"
+hero_credit: "United Kingdom Hydrographic Office / Wikimedia Commons (Public domain)"
 ---
 
 O ex-atacante Hélio, conhecido como Carrasco, morreu aos 61 anos. A informação foi divulgada pelo ge.
